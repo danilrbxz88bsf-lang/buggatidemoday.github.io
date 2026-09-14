@@ -1,5 +1,7 @@
+```html
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,103 +9,167 @@
     <title>Bugatti — История</title>
 
     <link rel="stylesheet" href="style3.css">
-    <link rel="stylesheet" href="index.html">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="index2.html">
-    <link rel="stylesheet" href="style2.css">
 </head>
 
 <body>
 
     <header class="header">
-        <div class="logo">BUGATTI</div>
+
+        <div class="logo">
+            BUGATTI
+        </div>
 
         <nav>
             <a href="index.html">Главная</a>
             <a href="index2.html">Модели</a>
             <a href="index3.html">История</a>
         </nav>
+
     </header>
 
-    <main>
 
-        <section class="hero">
-            <h1>История Bugatti</h1>
-            <p>Легенда автомобильного мира с 1909 года</p>
-        </section>
+    <section class="hero">
 
-        <section class="history">
-            <h2>Когда была создана Bugatti?</h2>
+        <div class="hero-content">
+
+            <h1>BUGATTI</h1>
 
             <p>
-                Компания Bugatti была основана Этторе Бугатти в 1909 году
-                в городе Мольсайм, который сегодня находится во Франции.
-                Именно здесь началась история легендарной автомобильной марки.
+                Легенда автомобильного мира
             </p>
 
-            <p>
-                С самого начала Bugatti сочетала инженерные технологии,
-                высокую производительность и необычный дизайн.
+            <p class="hero-year">
+                Основана в 1909 году
             </p>
 
-            <div class="facts">
+        </div>
 
-                <div class="fact">
-                    <h3>1909</h3>
-                    <p>Основание Bugatti</p>
-                </div>
+    </section>
 
-                <div class="fact">
-                    <h3>Ettore Bugatti</h3>
-                    <p>Основатель компании</p>
-                </div>
 
-                <div class="fact">
-                    <h3>Molsheim</h3>
-                    <p>Исторический дом Bugatti</p>
-                </div>
+    <section class="history">
 
+        <h2>История Bugatti</h2>
+
+        <p>
+            Компания Bugatti была основана Этторе Бугатти
+            в 1909 году в городе Мольсайм.
+        </p>
+
+        <p>
+            Bugatti стала известна благодаря своим спортивным
+            автомобилям, высокой производительности,
+            инженерным технологиям и необычному дизайну.
+        </p>
+
+        <div class="facts">
+
+            <div class="fact">
+                <h3>1909</h3>
+                <p>Год основания Bugatti</p>
             </div>
-        </section>
 
-        <section class="video-section">
-            <h2>Bugatti Tourbillon</h2>
-
-            <p>
-                Посмотри официальный видеоролик Bugatti о новом поколении
-                гиперкаров Tourbillon.
-            </p>
-
-            <div class="video-container">
-                <iframe
-                    src="https://www.youtube.com/embed/1-qwounu3yA"
-                    title="Bugatti Tourbillon"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
+            <div class="fact">
+                <h3>Ettore Bugatti</h3>
+                <p>Основатель компании</p>
             </div>
-        </section>
 
-        <section class="legacy">
-            <h2>Наследие Bugatti</h2>
+            <div class="fact">
+                <h3>Molsheim</h3>
+                <p>Исторический дом Bugatti</p>
+            </div>
 
-            <p>
-                Среди наиболее известных автомобилей марки — Type 35,
-                Type 57, EB110, Veyron и Chiron. Type 35 стал одной из
-                самых успешных гоночных моделей в истории марки.
-            </p>
+        </div>
 
-            <a class="back-button" href="index.html">
-                Вернуться на главную
-            </a>
-        </section>
+    </section>
 
-    </main>
+
+    <section class="video-section">
+
+        <h2>Bugatti Tourbillon</h2>
+
+        <p>
+            Посмотри видео о Bugatti.
+        </p>
+
+        <div class="video-container">
+
+            <iframe
+                src="https://www.youtube.com/embed/1-qwounu3yA"
+                title="Bugatti Tourbillon"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+    <section class="year-box">
+
+        <h2>Проверь свои знания</h2>
+
+        <p class="question">
+            В каком году была основана Bugatti?
+        </p>
+
+        <div class="answers">
+
+            <button onclick="checkAnswer(this, false)">1905</button>
+
+            <button onclick="checkAnswer(this, true)">1909</button>
+
+            <button onclick="checkAnswer(this, false)">1925</button>
+
+            <button onclick="checkAnswer(this, false)">1939</button>
+
+        </div>
+
+        <p id="result"></p>
+
+    </section>
+
 
     <footer>
-        <p>© 2026 Buggati Demoday</p>
+
+        <p>
+            © 2026 Bugatti Demoday
+        </p>
+
     </footer>
 
+
+    <script>
+
+        function checkAnswer(button, correct) {
+
+            const buttons =
+                document.querySelectorAll(".answers button");
+
+            buttons.forEach(function(btn) {
+                btn.disabled = true;
+            });
+
+            if (correct) {
+
+                button.classList.add("correct");
+
+                document.getElementById("result").textContent =
+                    "✅ Правильно! Bugatti была основана в 1909 году.";
+
+            } else {
+
+                button.classList.add("wrong");
+
+                document.getElementById("result").textContent =
+                    "❌ Неверно! Правильный ответ — 1909.";
+
+            }
+        }
+
+    </script>
+
 </body>
+
 </html>
+```
