@@ -1,34 +1,43 @@
+```css
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background: #0b0b0b;
+    background: #050505;
     color: white;
 }
 
-/* Шапка */
-
 .header {
-    width: 100%;
-    padding: 22px 8%;
+    height: 80px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #050505;
+
+    padding: 0 7%;
+
+    background: rgba(0, 0, 0, 0.95);
+
     border-bottom: 1px solid #222;
+
     position: sticky;
     top: 0;
-    z-index: 100;
+
+    z-index: 1000;
 }
 
 .logo {
     font-size: 28px;
     font-weight: bold;
-    letter-spacing: 5px;
+    letter-spacing: 6px;
 }
 
 nav {
@@ -40,181 +49,293 @@ nav a {
     color: white;
     text-decoration: none;
     font-size: 17px;
-    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #00aaff;
+    color: #aaa;
 }
 
-/* Главный блок */
 
 .hero {
-    min-height: 420px;
+    min-height: 650px;
+
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
 
     background:
-        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
-        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80")
-        center / cover;
+        linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.88)
+        ),
+        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=90")
+        center / cover no-repeat;
+
+    background-attachment: fixed;
 }
 
-.hero h1 {
-    font-size: 64px;
-    margin-bottom: 15px;
-    letter-spacing: 3px;
+.hero-content h1 {
+    font-size: 90px;
+    letter-spacing: 12px;
+    margin-bottom: 20px;
 }
 
-.hero p {
-    font-size: 22px;
-    color: #cccccc;
+.hero-content p {
+    font-size: 28px;
+    color: #ddd;
 }
 
-/* История */
+.hero-year {
+    margin-top: 20px;
+    font-size: 23px !important;
+    font-weight: bold;
+}
 
-.history,
-.video-section,
-.legacy {
+
+.history {
     width: 85%;
     max-width: 1100px;
-    margin: 80px auto;
+    margin: 100px auto;
     text-align: center;
 }
 
-h2 {
-    font-size: 42px;
-    margin-bottom: 25px;
+.history h2,
+.video-section h2,
+.year-box h2 {
+    font-size: 45px;
+    margin-bottom: 30px;
 }
 
-.history > p,
-.legacy > p,
-.video-section > p {
-    max-width: 850px;
-    margin: 15px auto;
-    line-height: 1.8;
-    color: #cccccc;
+.history > p {
+    max-width: 900px;
+    margin: 18px auto;
+
+    color: #ccc;
+
     font-size: 18px;
+
+    line-height: 1.8;
 }
 
-/* Факты */
 
 .facts {
     display: flex;
     justify-content: center;
     gap: 25px;
-    margin-top: 45px;
+    margin-top: 50px;
     flex-wrap: wrap;
 }
 
 .fact {
     width: 280px;
-    padding: 30px;
-    background: #151515;
-    border: 1px solid #292929;
-    border-radius: 14px;
+
+    padding: 35px 25px;
+
+    background: #111;
+
+    border: 1px solid #303030;
+
+    border-radius: 18px;
+
     transition: 0.3s;
 }
 
 .fact:hover {
-    transform: translateY(-8px);
-    border-color: #555;
+    transform: translateY(-10px);
 }
 
 .fact h3 {
-    font-size: 28px;
-    margin-bottom: 12px;
+    font-size: 30px;
+    margin-bottom: 15px;
 }
 
 .fact p {
     color: #aaa;
 }
 
-/* Видео */
+
+.video-section {
+    width: 85%;
+    max-width: 1100px;
+
+    margin: 100px auto;
+
+    text-align: center;
+}
+
+.video-section > p {
+    color: #bbb;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
 
 .video-container {
     width: 100%;
-    max-width: 950px;
+    max-width: 1000px;
+
     aspect-ratio: 16 / 9;
-    margin: 35px auto 0;
+
+    margin: auto;
+
+    border-radius: 20px;
+
     overflow: hidden;
-    border-radius: 16px;
-    box-shadow: 0 0 35px rgba(255, 255, 255, 0.08);
 }
 
 .video-container iframe {
     width: 100%;
     height: 100%;
+
     border: none;
 }
 
-/* Кнопка */
 
-.back-button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 15px 30px;
+.year-box {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 120px auto;
+
+    padding: 70px 40px;
+
+    background: #000;
+
+    border: 2px solid #242424;
+
+    border-radius: 25px;
+
+    text-align: center;
+}
+
+.question {
+    font-size: 30px;
+    margin-bottom: 45px;
+}
+
+.answers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.answers button {
+    width: 220px;
+    height: 110px;
 
     color: white;
+
     background: #151515;
-    border: 1px solid #444;
-    border-radius: 8px;
 
-    text-decoration: none;
-    transition: 0.3s;
+    border: 2px solid #444;
+
+    border-radius: 18px;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s;
 }
 
-.back-button:hover {
-    background: white;
-    color: black;
+.answers button:hover {
+    transform: scale(1.05);
+    border-color: white;
 }
 
-/* Подвал */
+.answers button.correct {
+    background: green;
+    border-color: green;
+}
+
+.answers button.wrong {
+    background: red;
+    border-color: red;
+}
+
+.answers button:disabled {
+    cursor: default;
+}
+
+.answers button:disabled:hover {
+    transform: none;
+}
+
+#result {
+    margin-top: 35px;
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
 
 footer {
+    padding: 40px;
+
+    background: #000;
+
     text-align: center;
-    padding: 35px;
-    background: #050505;
+
     color: #777;
-    margin-top: 80px;
+
+    border-top: 1px solid #222;
 }
 
-/* Телефон */
 
 @media (max-width: 700px) {
 
     .header {
+        height: auto;
+
+        padding: 20px;
+
         flex-direction: column;
+
         gap: 20px;
     }
 
     nav {
         gap: 15px;
+
         flex-wrap: wrap;
+
         justify-content: center;
     }
 
-    .hero h1 {
-        font-size: 42px;
+    .hero {
+        min-height: 550px;
     }
 
-    .hero p {
-        font-size: 18px;
+    .hero-content h1 {
+        font-size: 50px;
+        letter-spacing: 7px;
     }
 
-    h2 {
-        font-size: 32px;
+    .hero-content p {
+        font-size: 20px;
     }
 
-    .facts {
-        flex-direction: column;
-        align-items: center;
+    .history h2,
+    .video-section h2,
+    .year-box h2 {
+        font-size: 34px;
     }
 
-    .fact {
+    .question {
+        font-size: 23px;
+    }
+
+    .answers button {
         width: 100%;
+        max-width: 350px;
     }
 }
+```
