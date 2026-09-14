@@ -1,52 +1,45 @@
-
+```html
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>buggati</title>
-
+    <title>Bugatti Demoday</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="index2.html">
-    <link rel="stylesheet" href="style2.css">
-    <link rel="stylesheet" href="index3.html">
-    <link rel="stylesheet" href="style3.css">
 </head>
 
 <body>
 
-
-
     <!-- ШАПКА -->
+    <header class="header">
 
-    <header>
-        <div class="logo">BUGATTI</div>
+        <div class="logo">
+            BUGATTI
+        </div>
 
         <nav>
-            <a href="#home">Home</a>
-            <a href="#models">Models</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="index.html">Главная</a>
+            <a href="index2.html">Модели</a>
+            <a href="index3.html">История Bugatti</a>
         </nav>
+
     </header>
 
 
     <!-- ГЛАВНЫЙ ЭКРАН -->
-
-    <section class="hero" id="home">
+    <section class="hero">
 
         <div class="hero-content">
 
-            <p class="small-title">AUTOMOTIVE EXCELLENCE</p>
-
             <h1>BUGATTI</h1>
 
-            <p class="subtitle">CREATE THE INCOMPARABLE</p>
+            <p>
+                Искусство скорости и роскоши
+            </p>
 
-            <a href="#models" class="button">
-                DISCOVER
+            <a href="index2.html" class="hero-button">
+                Смотреть модели
             </a>
 
         </div>
@@ -54,147 +47,96 @@
     </section>
 
 
-    <!-- МОДЕЛИ -->
-
-    <section class="models" id="models">
-
-        <div class="section-title">
-            <p>OUR HYPER SPORTS CARS</p>
-            <h2>THE MODELS</h2>
-        </div>
-
-
-        <div class="model-grid">
-
-            <article class="model">
-                <img
-                    src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1600&q=90"
-                    alt="Bugatti style hypercar">
-
-                <div class="model-info">
-                    <span>HYPER SPORTS CAR</span>
-                    <h3>TOURBILLON</h3>
-                </div>
-            </article>
-
-
-            <article class="model">
-                <img
-                    src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1600&q=90"
-                    alt="Luxury sports car">
-
-                <div class="model-info">
-                    <span>ICONIC PERFORMANCE</span>
-                    <h3>CHIRON</h3>
-                </div>
-            </article>
-
-
-            <article class="model">
-                <img
-                    src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=90"
-                    alt="Sports car">
-
-                <div class="model-info">
-                    <span>PURE PERFORMANCE</span>
-                    <h3>BOLIDE</h3>
-                </div>
-            </article>
-
-
-            <article class="model">
-                <img
-                    src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1600&q=90"
-                    alt="Supercar">
-
-                <div class="model-info">
-                    <span>OPEN-AIR HYPER SPORTS CAR</span>
-                    <h3>MISTRAL</h3>
-                </div>
-            </article>
-
-        </div>
-
-    </section>
-
-
     <!-- О BUGATTI -->
+    <section class="about">
 
-    <section class="about" id="about">
+        <h2>Bugatti</h2>
 
-        <div class="about-content">
+        <p>
+            Bugatti — легендарная автомобильная марка, известная
+            своими мощными гиперкарами, уникальным дизайном
+            и высокими технологиями.
+        </p>
 
-            <p class="small-title">THE BUGATTI SPIRIT</p>
-
-            <h2>THE ART<br>OF SPEED</h2>
-
-            <p class="about-text">
-                Where engineering meets art.
-                Every detail is created with precision,
-                performance and an uncompromising pursuit
-                of excellence.
-            </p>
-
-        </div>
+        <p>
+            Компания была основана Этторе Бугатти в 1909 году
+            в Мольсайме.
+        </p>
 
     </section>
 
 
-    <!-- ХАРАКТЕРИСТИКИ -->
+    <!-- ПОПУЛЯРНЫЕ МОДЕЛИ -->
+    <section class="models">
 
-    <section class="performance">
+        <h2>Легендарные модели</h2>
 
-        <div class="section-title">
-            <p>ENGINEERING</p>
-            <h2>BEYOND LIMITS</h2>
+        <div class="model-container">
+
+            <div class="model-card">
+                <h3>Bugatti Veyron</h3>
+
+                <p>
+                    Один из самых известных гиперкаров
+                    в истории Bugatti.
+                </p>
+            </div>
+
+
+            <div class="model-card">
+                <h3>Bugatti Chiron</h3>
+
+                <p>
+                    Современный гиперкар с огромной
+                    мощностью и уникальным дизайном.
+                </p>
+            </div>
+
+
+            <div class="model-card">
+                <h3>Bugatti Tourbillon</h3>
+
+                <p>
+                    Новое поколение гиперкаров Bugatti.
+                </p>
+            </div>
+
         </div>
 
-
-        <div class="stats">
-
-            <div class="stat">
-                <strong>400+</strong>
-                <span>KM/H</span>
-            </div>
-
-            <div class="stat">
-                <strong>8.0</strong>
-                <span>LITRE ENGINE</span>
-            </div>
-
-            <div class="stat">
-                <strong>W16</strong>
-                <span>POWER UNIT</span>
-            </div>
-
-        </div>
+        <a href="index2.html" class="models-button">
+            Все модели
+        </a>
 
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- ИСТОРИЯ -->
+    <section class="history">
 
-    <footer id="contact">
+        <h2>История Bugatti</h2>
 
-        <div class="footer-logo">
-            BUGATTI
-        </div>
+        <p>
+            Узнай больше о создании Bugatti, её основателе
+            Этторе Бугатти и легендарных автомобилях компании.
+        </p>
 
-        <p>CREATE THE INCOMPARABLE</p>
+        <a href="index3.html" class="history-button">
+            Перейти к истории
+        </a>
 
-        <div class="footer-line"></div>
+    </section>
 
-        <span>© 2026 BUGATTI STYLE PROJECT</span>
+
+    <!-- ПОДВАЛ -->
+    <footer>
+
+        <p>
+            © 2026 Buggati Demoday
+        </p>
 
     </footer>
 
 </body>
+
 </html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Buggati Demoday</title>
-</head>
-
+```
