@@ -1,0 +1,524 @@
+/* =========================
+   ОСНОВНЫЕ НАСТРОЙКИ
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 25px 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 1000;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.85),
+        transparent
+    );
+}
+
+
+/* ЛОГО */
+
+.logo {
+    font-size: 28px;
+
+    font-weight: bold;
+
+    letter-spacing: 8px;
+}
+
+
+/* МЕНЮ */
+
+nav {
+    display: flex;
+
+    gap: 35px;
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #888;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    height: 100vh;
+
+    min-height: 650px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.9)
+        ),
+
+        url("https://images.unsplash.com/photo-1614200179396-2bdb77ebf81b?auto=format&fit=crop&w=2200&q=90")
+
+        center / cover no-repeat;
+}
+
+
+/* ТЕКСТ HERO */
+
+.hero-content {
+    animation: heroAnimation 1.5s ease;
+}
+
+.small-title {
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    color: #aaa;
+}
+
+.hero h1 {
+    font-size: clamp(65px, 11vw, 160px);
+
+    font-weight: 900;
+
+    letter-spacing: 15px;
+
+    margin: 20px 0;
+}
+
+.subtitle {
+    font-size: 14px;
+
+    letter-spacing: 6px;
+
+    color: #ddd;
+}
+
+
+/* КНОПКА */
+
+.button {
+    display: inline-block;
+
+    margin-top: 40px;
+
+    padding: 17px 40px;
+
+    border: 1px solid white;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    transition: 0.4s;
+}
+
+.button:hover {
+    background: white;
+
+    color: black;
+}
+
+
+/* АНИМАЦИЯ */
+
+@keyframes heroAnimation {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   ОБЩИЕ SECTION
+========================= */
+
+section {
+    padding: 120px 7%;
+}
+
+
+/* ЗАГОЛОВОК */
+
+.section-title {
+    margin-bottom: 60px;
+}
+
+.section-title p {
+    color: #777;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+}
+
+.section-title h2 {
+    margin-top: 15px;
+
+    font-size: clamp(45px, 7vw, 95px);
+
+    letter-spacing: 4px;
+}
+
+
+/* =========================
+   MODELS
+========================= */
+
+.models {
+    background: #090909;
+}
+
+
+/* СЕТКА */
+
+.model-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* КАРТОЧКА */
+
+.model {
+    height: 500px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #111;
+}
+
+
+/* КАРТИНКА */
+
+.model img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.8s;
+}
+
+
+/* ЭФФЕКТ ПРИ НАВЕДЕНИИ */
+
+.model:hover img {
+    transform: scale(1.08);
+}
+
+
+/* ГРАДИЕНТ */
+
+.model::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        transparent 40%,
+        rgba(0, 0, 0, 0.9)
+    );
+}
+
+
+/* ТЕКСТ */
+
+.model-info {
+    position: absolute;
+
+    left: 35px;
+
+    bottom: 35px;
+
+    z-index: 2;
+}
+
+.model-info span {
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #aaa;
+}
+
+.model-info h3 {
+    margin-top: 10px;
+
+    font-size: 38px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    min-height: 750px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.95)
+        ),
+
+        url("https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=2200&q=90")
+
+        center / cover no-repeat;
+}
+
+.about-content {
+    max-width: 900px;
+}
+
+.about h2 {
+    font-size: clamp(50px, 8vw, 110px);
+
+    line-height: 0.95;
+
+    letter-spacing: 5px;
+
+    margin: 25px 0;
+}
+
+.about-text {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #aaa;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+
+
+.performance {
+    background: #050505;
+}
+
+
+
+.stats {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.stat {
+    padding: 50px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid #333;
+
+    border-bottom: 1px solid #333;
+
+    transition: 0.4s;
+}
+
+.stat:hover {
+    background: #0d0d0d;
+}
+
+.stat strong {
+    display: block;
+
+    font-size: 65px;
+
+    letter-spacing: 3px;
+}
+
+.stat span {
+    display: block;
+
+    margin-top: 12px;
+
+    color: #777;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+}
+
+
+
+footer {
+    padding: 90px 7%;
+
+    text-align: center;
+
+    border-top: 1px solid #222;
+}
+
+.footer-logo {
+    font-size: 45px;
+
+    font-weight: bold;
+
+    letter-spacing: 10px;
+}
+
+footer p {
+    margin-top: 20px;
+
+    color: #777;
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+}
+
+.footer-line {
+    width: 100px;
+
+    height: 1px;
+
+    background: #444;
+
+    margin: 40px auto;
+}
+
+footer span {
+    color: #555;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+
+        letter-spacing: 7px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    section {
+        padding: 80px 5%;
+    }
+
+    .model-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .model {
+        height: 400px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        min-height: 600px;
+    }
+
+    .about h2 {
+        font-size: 55px;
+    }
+}
