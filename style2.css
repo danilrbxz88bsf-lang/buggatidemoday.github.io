@@ -1,3 +1,4 @@
+```css
 * {
     margin: 0;
     padding: 0;
@@ -6,52 +7,43 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #050505;
+    background: #080808;
     color: white;
 }
 
-
-/* HEADER */
-
-header {
+.header {
     height: 80px;
-
     display: flex;
-    align-items: center;
     justify-content: space-between;
-
-    padding: 0 70px;
-
-    background: #080808;
+    align-items: center;
+    padding: 0 7%;
+    background: #050505;
     border-bottom: 1px solid #222;
 }
 
 .logo {
     font-size: 28px;
     font-weight: bold;
-    letter-spacing: 5px;
+    letter-spacing: 6px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-
-    margin-left: 35px;
-
-    font-size: 16px;
-
-    transition: 0.3s;
+    font-size: 17px;
 }
 
 nav a:hover {
-    color: #d40000;
+    color: #aaa;
 }
 
-
-/* HERO */
-
 .hero {
-    height: 420px;
+    min-height: 450px;
 
     display: flex;
     flex-direction: column;
@@ -63,130 +55,126 @@ nav a:hover {
     background:
         linear-gradient(
             rgba(0, 0, 0, 0.55),
-            rgba(0, 0, 0, 0.8)
+            rgba(0, 0, 0, 0.85)
         ),
-        url("images/bugatti.jpg") center/cover;
+        url("https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=2000&q=90")
+        center / cover no-repeat;
 }
 
 .hero h1 {
-    font-size: 64px;
-    letter-spacing: 8px;
+    font-size: 65px;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    margin-top: 15px;
-
-    font-size: 20px;
+    font-size: 22px;
     color: #ccc;
 }
 
+.cars {
+    width: 85%;
+    max-width: 1200px;
+    margin: 90px auto;
 
-/* MODELS */
-
-.models {
-    padding: 60px 8%;
-}
-
-.models h2 {
-    text-align: center;
-
-    font-size: 38px;
-
-    margin-bottom: 45px;
-
-    letter-spacing: 3px;
-}
-
-
-/* CARDS */
-
-.cards {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
+    display: flex;
+    justify-content: center;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
-.card {
+.car-card {
+    width: 350px;
+    padding: 40px 30px;
+
     background: #111;
+    border: 1px solid #2c2c2c;
 
-    border: 1px solid #292929;
-
-    overflow: hidden;
+    border-radius: 20px;
 
     transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-
-    border-color: #d40000;
+.car-card:hover {
+    transform: translateY(-10px);
 }
 
-.card img {
+.car-card h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.car-card p {
+    color: #bbb;
+    line-height: 1.7;
+}
+
+.specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.specs span {
+    padding: 10px 14px;
+    background: #202020;
+    border-radius: 8px;
+    color: #ddd;
+}
+
+.video-section {
+    width: 85%;
+    max-width: 1100px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.video-section h2 {
+    font-size: 42px;
+    margin-bottom: 35px;
+}
+
+.video-container {
     width: 100%;
-    height: 220px;
-
-    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 18px;
 }
 
-.card-content {
-    padding: 25px;
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
-
-.card h3 {
-    font-size: 25px;
-
-    margin-bottom: 12px;
-}
-
-.card p {
-    color: #aaa;
-
-    line-height: 1.6;
-}
-
-.price {
-    display: block;
-
-    margin-top: 20px;
-
-    color: #d40000;
-
-    font-size: 20px;
-    font-weight: bold;
-}
-
-
-/* FOOTER */
 
 footer {
-    margin-top: 50px;
-
-    padding: 30px;
-
+    padding: 40px;
+    background: #000;
     text-align: center;
-
-    background: #080808;
-
     color: #777;
 }
 
+@media (max-width: 700px) {
 
-/* ADAPTIVE */
-
-@media (max-width: 900px) {
-
-    .cards {
-        grid-template-columns: 1fr;
+    .header {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
     }
 
-    header {
-        padding: 0 25px;
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .hero h1 {
         font-size: 42px;
     }
+
+    .car-card {
+        width: 100%;
+    }
 }
+```
